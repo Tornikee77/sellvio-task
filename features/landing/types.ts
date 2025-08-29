@@ -14,3 +14,11 @@ export type ButtonProps = {
   size: string;
   img?: string;
 };
+export type CompanyCard = {
+  status: "აქტიური" | "დასრულებული" | "დაუსრულებელი";
+  creator: number;
+  view: number;
+  fullbudget: number;
+  yourbudget: number;
+  totalpayment: number;
+};

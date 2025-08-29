@@ -3,9 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCompanyCards } from "../../api";
 import Image from "next/image";
 import Button from "../primitives/button";
+import { CompanyCard } from "../../types";
 
 const Companys = () => {
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery<CompanyCard[]>({
     queryKey: ["cards"],
     queryFn: fetchCompanyCards,
   });
@@ -69,7 +70,7 @@ const Companys = () => {
                     alt="created"
                   />
                   <p className="text-[#111827AD] font-medium">
-                    <span>{eachElement.creator}</span> შექმნილი
+                    <span>{eachElement.creator.toLocaleString()}</span> შექმნილი
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
