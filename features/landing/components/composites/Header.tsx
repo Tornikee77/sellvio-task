@@ -1,10 +1,9 @@
 import Image from "next/image";
-import React from "react";
 import { headerBtns } from "../../data/landingData";
 
 const Header = () => {
   return (
-    <div className="mx-auto flex w-full items-center justify-between px-4 py-4 bg-[aqua]">
+    <div className="mx-auto max-w-[1410px] flex w-full items-center justify-between px-4 py-4 ">
       <div>
         <Image
           src="./images/svg/logo.svg"
@@ -13,7 +12,7 @@ const Header = () => {
           alt="siteLogo"
         />
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 py-">
         {headerBtns.map((eachElement) => (
           <div
             className="w-[50px] h-[50px]  border border-[#00000010] flex justify-center items-center rounded-[8px] cursor-pointer"
