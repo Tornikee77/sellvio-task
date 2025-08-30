@@ -13,6 +13,7 @@ export type ButtonProps = {
   color: string;
   size: string;
   img?: string;
+  href: string;
 };
 export type CompanyCard = {
   status: "აქტიური" | "დასრულებული" | "დაუსრულებელი";

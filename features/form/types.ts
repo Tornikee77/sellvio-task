@@ -9,3 +9,8 @@ export type CreatoreGoalProps = {
   title: string;
   descr: string;
 };
+export type UploadFileProps = {
+  id: number;
+  img: string;
+  title: string;
+};

@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { UploadFile } from "../../data/data";
+import Button from "@/features/landing/components/primitives/button";
 
 const ExtraMedia = () => {
   const [open, setOpen] = useState(false);
@@ -9,7 +11,6 @@ const ExtraMedia = () => {
   return (
     <div className="max-w-[1222px] w-full bg-transparent mx-auto rounded-[8px] px-[30px] py-[30px] flex flex-col border mt-16">
       <div className="flex flex-col">
-        {/* Header with toggle */}
         <div
           className="flex items-center justify-between cursor-pointer"
           onClick={() => setOpen((prev) => !prev)}
@@ -56,6 +57,29 @@ const ExtraMedia = () => {
             </motion.div>
           )}
         </AnimatePresence>
+      </div>
+      <div className="flex w-full gap-5 flex-wrap mt-5">
+        {UploadFile.map((eachElement) => (
+          <div
+            key={eachElement.id}
+            className="w-[550px] flex flex-col justify-center items-center border border-dashed gap-4 pt-[21px] pb-[21px]"
+          >
+            <Image
+              src={eachElement.img}
+              width={40}
+              height={40}
+              alt={eachElement.title}
+            />
+            <p className="text-[#000000A3] font-[700]">{eachElement.title}</p>
+
+            <Button
+              text="აირჩიე ფაილი"
+              size="w-[267px] px-2 py-3 rounded-[8px] cursor-pointer"
+              color="bg-[#0866FF]"
+              href="/"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { CreatoreGoalProps, Item } from "../types";
+import { CreatoreGoalProps, Item, UploadFileProps } from "../types";
 
 export const Socmedia: Item[] = [
   {
@@ -45,5 +45,6 @@ export const GoalCards: CreatoreGoalProps[] = [
   },
 ];
 export const UploadFile: UploadFileProps[] = [
-  { id: "1", img: "/images/svg/ImageIcon.svg", title: "ატვირთე ფაილი" },
+  { id: 1, img: "./images/svg/gallery.svg", title: "ატვირთე ფაილი" },
+  { id: 2, img: "./images/svg/upload.svg", title: "ატვირთე ლინკი" },
 ];
