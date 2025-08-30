@@ -1,6 +1,6 @@
-import { Item } from "../types";
+import { CreatoreGoalProps, Item } from "../types";
 
-export const items: Item[] = [
+export const Socmedia: Item[] = [
   {
     id: "1",
     img: "/images/svg/tt.svg",
@@ -16,4 +16,34 @@ export const items: Item[] = [
     img: "/images/svg/facebook.svg",
     title: "Facebook",
   },
+];
+
+export const GoalCards: CreatoreGoalProps[] = [
+  {
+    id: "1",
+    img: "/images/svg/star.svg",
+    title: "ინფლუენსერი",
+    descr: "ცნობილი შემქმნელები დამკვიდრებული აუდიტორიით",
+  },
+  {
+    id: "2",
+    img: "/images/svg/cup.svg",
+    title: "გამოცდილი შემქმნელი",
+    descr: "შემქმნელები დადასტურებული კონტენტის გამოცდილებით",
+  },
+  {
+    id: "3",
+    img: "/images/svg/profileGoal.svg",
+    title: "დამწყები შემქმნელი",
+    descr: "ახალი შემქმნელები რომლებიც ცდილობენ გამოცდილების დაგროვებას",
+  },
+  {
+    id: "4",
+    img: "/images/svg/scissors.svg",
+    title: "კლიპერი",
+    descr: "ვიდეო მონტაჟის სპეციალისტები",
+  },
+];
+export const UploadFile: UploadFileProps[] = [
+  { id: "1", img: "/images/svg/ImageIcon.svg", title: "ატვირთე ფაილი" },
 ];

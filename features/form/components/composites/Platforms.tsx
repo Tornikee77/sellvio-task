@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import { items } from "../../data/data";
+import { Socmedia } from "../../data/data";
 
 const Platforms = () => {
   return (
-    <div className="max-w-[1222px] w-full bg-transparent mx-auto  rounded-[8px] px-[30px] py-[30px] flex flex-col border">
+    <div className="max-w-[1222px] w-full bg-transparent mx-auto  rounded-[8px] px-[30px] py-[30px] flex flex-col border mt-16">
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <Image
@@ -22,10 +22,10 @@ const Platforms = () => {
         </p>
       </div>
       <div className="flex   gap-[185px] w-full mt-[26px]">
-        {items?.map((eachelement) => (
+        {Socmedia?.map((eachelement) => (
           <div
             key={eachelement.id}
-            className="w-[264px] h-[111px] bg-transparent border rounded-[8px] flex flex-col items-center justify-center gap-4"
+            className="w-[264px] h-[111px] bg-transparent border rounded-[8px] flex flex-col items-center justify-center gap-4 cursor-pointer"
           >
             <Image
               src={eachelement.img}
