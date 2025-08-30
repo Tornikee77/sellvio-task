@@ -1,4 +1,5 @@
 import CompanyBasics from "@/features/form/components/composites/CompanyBasics";
+import CompanyDetails from "@/features/form/components/composites/CompanyDetails";
 import ExtraMedia from "@/features/form/components/composites/ExtraMedia";
 import GoalCreatores from "@/features/form/components/composites/GoalCreatores";
 import Platforms from "@/features/form/components/composites/Platforms";
@@ -14,6 +15,7 @@ const page = () => {
       <Platforms />
       <GoalCreatores />
       <ExtraMedia />
+      <CompanyDetails />
     </div>
   );
 };

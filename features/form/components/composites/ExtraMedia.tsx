@@ -12,7 +12,7 @@ const ExtraMedia = () => {
     <div className="max-w-[1222px] w-full bg-transparent mx-auto rounded-[8px] px-[30px] py-[30px] flex flex-col border mt-16">
       <div className="flex flex-col">
         <div
-          className="flex items-center justify-between cursor-pointer"
+          className="flex items-center justify-between max-w-[1222px] cursor-pointer"
           onClick={() => setOpen((prev) => !prev)}
         >
           <div className="flex items-center gap-2">
@@ -58,11 +58,11 @@ const ExtraMedia = () => {
           )}
         </AnimatePresence>
       </div>
-      <div className="flex w-full gap-5 flex-wrap mt-5">
+      <div className="flex w-full mx-auto gap-5 flex-wrap mt-5">
         {UploadFile.map((eachElement) => (
           <div
             key={eachElement.id}
-            className="w-[550px] flex flex-col justify-center items-center border border-dashed gap-4 pt-[21px] pb-[21px]"
+            className="w-[570px] flex flex-col gap-5 justify-center items-center border border-dashed  pt-[21px] pb-[21px] bg-[#0866FF05] rounded-[8px]"
           >
             <Image
               src={eachElement.img}
