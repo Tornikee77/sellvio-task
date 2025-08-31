@@ -11,11 +11,9 @@ const DropDownInput = ({ size, placeholder, options }: DropDownInputProps) => {
   }
 
   return (
-    <div className="flex mt-8 flex-col" style={{ width: size }}>
+    <div className="flex flex-col" style={{ width: size }}>
       <div className="mb-6">
-        <h3 className="text-[#000000] font-[700] text-[18px] mb-4">
-          კამპანიის ხანგრძლივობა (დღეები)
-        </h3>
+        <h3 className="text-[#000000] font-[700] text-[18px] mb-4"></h3>
 
         <div className="relative">
           <div className="relative">

@@ -10,6 +10,7 @@ export const companySchema = z.object({
   amount: z.string().min(1, "Amount is required"),
   auditory: z.string().min(7, "Auditory must be at least 7 characters"),
   requirements: z.string().min(7, "Requirements must be at least 7 characters"),
+  payMent: z.string().min(1, "Requirements must be at least 7 characters"),
   extraRequirements: z
     .string()
     .min(7, "Extra requirements must be at least 7 characters"),

@@ -61,11 +61,17 @@ const CompanyDetails = () => {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex items-center justify-between">
-          <DropDownInput
-            size="543px"
-            placeholder="მაგ:1 დღე"
-            options={dayOptions}
-          />
+          <div className="flex flex-col">
+            <h3 className="mt-[26px] text-[#000000] font-[700] text-[18px] ">
+              კამპანიის ხანგრძლივობა (დღეები)
+            </h3>
+            <DropDownInput
+              size="543px"
+              placeholder="მაგ:1 დღე"
+              options={dayOptions}
+            />
+          </div>
+
           <div className="flex flex-col">
             <h3 className="text-[#000000] font-[700] text-[18px] mb-4">
               სამიზნე აუდიტორია
