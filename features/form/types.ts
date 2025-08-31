@@ -14,3 +14,12 @@ export type UploadFileProps = {
   img: string;
   title: string;
 };
+export type DropDownInputProps = {
+  size?: string;
+  placeholder?: string;
+  options: DropDownOption[];
+};
+export type DropDownOption = {
+  label: string;
+  value: string;
+};

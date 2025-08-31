@@ -1,21 +1,11 @@
-import CompanyBasics from "@/features/form/components/composites/CompanyBasics";
-import CompanyDetails from "@/features/form/components/composites/CompanyDetails";
-import ExtraMedia from "@/features/form/components/composites/ExtraMedia";
-import GoalCreatores from "@/features/form/components/composites/GoalCreatores";
-import Platforms from "@/features/form/components/composites/Platforms";
-import Companys from "@/features/landing/components/composites/Companys";
-import Header from "@/features/landing/components/composites/Header";
+import Form from "@/features/form/components/Form";
+import Landing from "@/features/landing/components/Landing";
 
 const page = () => {
   return (
     <div>
-      <Header />
-      <Companys />
-      <CompanyBasics />
-      <Platforms />
-      <GoalCreatores />
-      <ExtraMedia />
-      <CompanyDetails />
+      <Landing />
+      <Form />
     </div>
   );
 };

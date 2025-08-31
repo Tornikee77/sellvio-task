@@ -13,6 +13,7 @@ export const companySchema = z.object({
   extraRequirements: z
     .string()
     .min(7, "Extra requirements must be at least 7 characters"),
+  tag: z.string().min(7, "Extra requirements must be at least 7 characters"),
 });
 
 export type CompanyFormValues = z.infer<typeof companySchema>;

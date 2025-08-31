@@ -2,8 +2,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchCompanyCards } from "../../api";
 import Image from "next/image";
-import Button from "../primitives/button";
+
 import { CompanyCard } from "../../types";
+import Button from "../primitives/button";
 
 const Companys = () => {
   const { data, isLoading, isError } = useQuery<CompanyCard[]>({
@@ -24,7 +25,6 @@ const Companys = () => {
             color=" bg-[#0866FF]"
             size="w-[229px] py-3 px-2 border cursor-pointer"
             img="/images/svg/plus.svg"
-            href="#"
           />
         </div>
       </div>

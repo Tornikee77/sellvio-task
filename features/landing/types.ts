@@ -9,11 +9,13 @@ export type ProgressDashProps = {
   goalAmount: number;
 };
 export type ButtonProps = {
-  text: string;
+  text?: string;
   color: string;
   size: string;
   img?: string;
-  href: string;
+  href?: string;
+  type?: "button" | "submit" | "reset";
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 export type CompanyCard = {
   status: "აქტიური" | "დასრულებული" | "დაუსრულებელი";

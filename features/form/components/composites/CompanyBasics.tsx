@@ -4,8 +4,15 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { CompanyFormValues, companySchema } from "../../shcema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 
 const CompanyBasics = () => {
+  const [isOn, setIsOn] = useState(false);
+
+  const toggleHandler = () => {
+    setIsOn((prev) => !prev);
+  };
+
   const {
     register,
     formState: { errors },
@@ -31,6 +38,7 @@ const CompanyBasics = () => {
           დააყენეთ თქვენი კამპანიის ფუნდამენტური დეტალები
         </p>
       </div>
+
       <form className="flex-col gap-[75px] mx-auto">
         <div className="flex gap-[75px] mt-[26px]">
           <div>
@@ -43,7 +51,7 @@ const CompanyBasics = () => {
                 type="text"
                 placeholder="მაგ: საზაფხულო პროდუქტი"
                 {...register("companyName")}
-                className="w-[543px] border rounded px-3 py-2 text-[#000000] font-[700] outline-none"
+                className="w-[543px] border border-[#E3E8EF] rounded px-3 py-2 text-[#000000] font-[700] outline-none"
               />
               {errors.companyName && (
                 <span className="text-xs text-red-500">
@@ -52,6 +60,7 @@ const CompanyBasics = () => {
               )}
             </div>
           </div>
+
           <div>
             <div>
               <h3 className="font-[700] text-[18px] text-[#000000] mb-4 ">
@@ -60,17 +69,42 @@ const CompanyBasics = () => {
               <div>
                 <label className="block mb-1 text-sm font-medium"></label>
                 <input
-                  type="text"
+                  type={isOn ? "password" : "text"}
                   placeholder="₾ 5000"
                   {...register("budget")}
-                  className="w-[543px] border rounded px-3 py-2 text-[#000000] font-[700] outline-none"
+                  className="w-[543px] border border-[#E3E8EF] rounded px-3 py-2 text-[#000000] font-[700] outline-none"
                 />
-                {errors.companyName && (
+                {errors.budget && (
                   <span className="text-xs text-red-500">
-                    {errors.companyName.message}
+                    {errors.budget.message}
                   </span>
                 )}
               </div>
+            </div>
+
+            <div
+              className="w-full flex items-center gap-3 cursor-pointer mt-3 justify-end "
+              onClick={toggleHandler}
+            >
+              <p className="text-[#000000] font-[700]">
+                დამალე ბიუჯეტი შემქნელებისთვის
+              </p>
+
+              {isOn ? (
+                <Image
+                  src="/images/svg/turnOn.svg"
+                  width={40}
+                  height={22}
+                  alt="turnOn"
+                />
+              ) : (
+                <Image
+                  src="/images/svg/turnOff.svg"
+                  width={40}
+                  height={22}
+                  alt="turnOff"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -84,11 +118,11 @@ const CompanyBasics = () => {
             <textarea
               placeholder="აღწერეთ თქვენი კამპანიის მიზნები, სამიზნე აუდიტორია და რას ეძებთ შემქმნელებში..."
               {...register("companyDesc")}
-              className="w-full border rounded px-3 py-2 text-[#000000] font-[700] outline-none"
+              className="w-full border border-[#E3E8EF] rounded px-3 py-2 text-[#000000] min-h-[218px] font-[700] outline-none resize-none"
             />
-            {errors.companyName && (
+            {errors.companyDesc && (
               <span className="text-xs text-red-500">
-                {errors.companyName.message}
+                {errors.companyDesc.message}
               </span>
             )}
           </div>
