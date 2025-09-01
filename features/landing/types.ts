@@ -25,3 +25,7 @@ export type CompanyCard = {
   yourbudget: number;
   totalpayment: number;
 };
+export type ProgressBarProps = {
+  currentAmount: number;
+  goalAmount: number;
+};

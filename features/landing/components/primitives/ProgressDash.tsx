@@ -1,7 +1,8 @@
-import { ProgressDashProps } from "../../types";
+import React from "react";
 import { motion } from "motion/react";
+import { ProgressBarProps } from "../../types";
 
-const ProgressDash: React.FC<ProgressDashProps> = ({
+const ProgressBar: React.FC<ProgressBarProps> = ({
   currentAmount,
   goalAmount,
 }) => {
@@ -9,12 +10,6 @@ const ProgressDash: React.FC<ProgressDashProps> = ({
 
   return (
     <div className="mx-auto w-full">
-      <div className="flex justify-between mb-[3px] w-full">
-        <p className="font-medium text-[12px]">ბიუჯეტი</p>
-        <p className="font-medium text-[14px]">
-          ${goalAmount - currentAmount} დარჩა
-        </p>
-      </div>
       <div className="bg-[#E6E7EB] rounded-full w-full h-2 overflow-hidden">
         <motion.div
           className="bg-[#8265FF] rounded-full h-full"
@@ -22,10 +17,9 @@ const ProgressDash: React.FC<ProgressDashProps> = ({
           whileInView={{ width: `${percentage}%` }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-        />
+        ></motion.div>
       </div>
     </div>
   );
 };
-
-export default ProgressDash;
+export default ProgressBar;

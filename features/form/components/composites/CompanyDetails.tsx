@@ -6,6 +6,7 @@ import Image from "next/image";
 import DropDownInput from "../primitives/DropDownInput";
 import Button from "@/features/landing/components/primitives/button";
 import { dayOptions } from "../primitives/DropDownOptions";
+import Tags from "./Tags";
 
 const CompanyDetails = () => {
   const {
@@ -117,19 +118,7 @@ const CompanyDetails = () => {
           <h3 className="text-[#000000] font-[700] text-[18px] mb-4 mt-6">
             კამპანიის თეგები
           </h3>
-          <div className="flex gap-4">
-            <input
-              placeholder="თეგის დამატება"
-              {...register("tag")}
-              className="w-[1100px] border border-[#E3E8EF] rounded px-3 py-2 text-[#000000] font-[700] outline-none"
-            />
-            <Button
-              size="w-[58px] h-[58px] flex justify-center items-center"
-              color="bg-transparent border  rounded-[8px]"
-              img="/images/svg/plusBlack.svg"
-              type="button"
-            />
-          </div>
+          <Tags label="კამპანიის თეგები" placeholder="თეგების დამატება" />
         </div>
 
         <div className="flex justify-end gap-4 mt-10">

@@ -8,6 +8,7 @@ import Button from "../primitives/button";
 import Link from "next/link";
 import ToggleButtons from "@/features/form/components/composites/ToggleButtons";
 import { useState } from "react";
+import ProgressBar from "../primitives/ProgressDash";
 
 const Companys = () => {
   const [active, setActive] = useState<"analytic" | "campaing">("analytic");
@@ -106,8 +107,7 @@ const Companys = () => {
                     {eachElement.fullbudget.toLocaleString()}
                   </p>
                 </div>
-
-                <div className="w-full h-[1px] bg-[#111827] my-3" />
+                <ProgressBar currentAmount={1000} goalAmount={10000} />
 
                 <div className="flex justify-between items-center text-[#000000AD] font-medium">
                   <p>ჯამური გადახდა</p>
