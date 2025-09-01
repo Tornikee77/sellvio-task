@@ -10,10 +10,10 @@ import ToggleButtons from "@/features/form/components/composites/ToggleButtons";
 import { useState } from "react";
 
 const Companys = () => {
-  const [active, setActive] = useState<"analytic" | "submit">("analytic");
+  const [active, setActive] = useState<"analytic" | "campaing">("analytic");
 
   const { data, isLoading, isError } = useQuery<CompanyCard[]>({
-    queryKey: ["cards", active], // active-ს მიბმა
+    queryKey: ["cards", active],
     queryFn: () => fetchCompanyCards({ dataName: active }),
   });
 
