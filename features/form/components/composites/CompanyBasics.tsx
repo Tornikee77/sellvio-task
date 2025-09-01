@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { companySchema } from "../../shcema";
@@ -27,7 +26,7 @@ const CompanyBasics = () => {
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <Image
-            src="/images/svg/CompanyBasics.svg"
+            src="/images/svg/companyBasics.svg"
             width={22}
             height={22}
             alt="logo"

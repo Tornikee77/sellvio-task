@@ -46,7 +46,7 @@ const CompanyDetails = () => {
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <Image
-            src="/images/svg/CompanyDetails.svg"
+            src="/images/svg/companyDetails.svg"
             width={22}
             height={22}
             alt="logo"
