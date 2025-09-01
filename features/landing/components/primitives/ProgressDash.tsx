@@ -12,7 +12,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     <div className="mx-auto w-full">
       <div className="bg-[#E6E7EB] rounded-full w-full h-2 overflow-hidden">
         <motion.div
-          className="bg-[#8265FF] rounded-full h-full"
+          className="bg-[#0866FF] rounded-full h-full "
           initial={{ width: 0 }}
           whileInView={{ width: `${percentage}%` }}
           viewport={{ once: true, amount: 0.6 }}

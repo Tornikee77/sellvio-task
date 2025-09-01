@@ -107,7 +107,10 @@ const Companys = () => {
                     {eachElement.fullbudget.toLocaleString()}
                   </p>
                 </div>
-                <ProgressBar currentAmount={1000} goalAmount={10000} />
+                <ProgressBar
+                  currentAmount={eachElement.yourbudget}
+                  goalAmount={10000}
+                />
 
                 <div className="flex justify-between items-center text-[#000000AD] font-medium">
                   <p>ჯამური გადახდა</p>
