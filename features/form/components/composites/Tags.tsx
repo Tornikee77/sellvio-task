@@ -1,6 +1,7 @@
 import { useState } from "react";
-// import { TagsProps } from "../../types";
+
 import Button from "@/features/landing/components/primitives/button";
+import { TagsProps } from "../../types";
 
 const Tags = ({
   label,
