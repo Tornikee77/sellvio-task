@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TagsProps } from "../../types";
+// import { TagsProps } from "../../types";
 import Button from "@/features/landing/components/primitives/button";
 
 const Tags = ({

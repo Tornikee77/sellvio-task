@@ -31,3 +31,9 @@ export type ButtonSliderProps = {
   active: "analytic" | "campaing";
   setActive: (value: "analytic" | "campaing") => void;
 };
+export type TagsProps = {
+  label: string;
+  placeholder?: string;
+  error?: string;
+  onChange?: (values: string[]) => void;
+};
