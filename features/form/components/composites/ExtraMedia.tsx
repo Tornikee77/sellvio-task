@@ -32,7 +32,7 @@ const ExtraMedia = () => {
             transition={{ duration: 0.3 }}
           >
             <Image
-              src="/images/svg/dropDown.svg"
+              src="/images/svg/dropdown.svg"
               width={12}
               height={6}
               alt="dropDown"
