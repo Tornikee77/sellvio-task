@@ -18,7 +18,9 @@ const Companys = () => {
   return (
     <div className="flex flex-wrap gap-6 max-w-[1387px] w-full mx-auto">
       <div className="flex justify-between items-center w-[1378px] mx-auto">
-        <h2 className="text-[24px] font-bold">შენი კამპანიები</h2>
+        <h2 className="text-[24px] font-bold text-[#000000]">
+          შენი კამპანიები
+        </h2>
         <div>
           <Button
             text="დაიწყე ახალი კემპინგი"

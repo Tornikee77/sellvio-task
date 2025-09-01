@@ -25,3 +25,8 @@ export type CompanyCard = {
   yourbudget: number;
   totalpayment: number;
 };
+
+export type ButtonSliderProps = {
+  active: "business" | "creator";
+  setActive: (value: "business" | "creator") => void;
+};

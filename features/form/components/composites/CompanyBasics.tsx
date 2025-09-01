@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import { CompanyFormValues, companySchema } from "../../shcema";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
+import { companySchema } from "../../shcema";
+import ToggleSwitch from "../primitives/ToggleSwitch";
 
 const CompanyBasics = () => {
   const [isOn, setIsOn] = useState(false);
@@ -16,7 +18,7 @@ const CompanyBasics = () => {
   const {
     register,
     formState: { errors },
-  } = useForm<CompanyFormValues>({
+  } = useForm({
     resolver: zodResolver(companySchema),
   });
 
@@ -90,21 +92,7 @@ const CompanyBasics = () => {
                 დამალე ბიუჯეტი შემქნელებისთვის
               </p>
 
-              {isOn ? (
-                <Image
-                  src="/images/svg/turnOn.svg"
-                  width={40}
-                  height={22}
-                  alt="turnOn"
-                />
-              ) : (
-                <Image
-                  src="/images/svg/turnOff.svg"
-                  width={40}
-                  height={22}
-                  alt="turnOff"
-                />
-              )}
+              <ToggleSwitch value={isOn} onToggle={toggleHandler} />
             </div>
           </div>
         </div>

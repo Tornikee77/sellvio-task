@@ -23,3 +23,7 @@ export type DropDownOption = {
   label: string;
   value: string;
 };
+export type ToggleSwitchProps = {
+  value: boolean;
+  onToggle: (val: boolean) => void;
+};

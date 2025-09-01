@@ -13,7 +13,7 @@ const CompanyDetails = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<CompanyFormValues>({
+  } = useForm({
     resolver: zodResolver(companySchema),
   });
 
