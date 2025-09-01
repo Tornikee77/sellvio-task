@@ -27,3 +27,7 @@ export type ToggleSwitchProps = {
   value: boolean;
   onToggle: (val: boolean) => void;
 };
+export type ButtonSliderProps = {
+  active: "analytic" | "campaing";
+  setActive: (value: "analytic" | "campaing") => void;
+};

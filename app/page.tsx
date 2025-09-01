@@ -1,11 +1,9 @@
-import Form from "@/features/form/components/Form";
 import Landing from "@/features/landing/components/Landing";
 
 const page = () => {
   return (
-    <div>
+    <div className="py-[30px] px-[30px]">
       <Landing />
-      <Form />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import ButtonSlider from "./composites/AnalytircCampaing";
+"use client";
 import Companys from "./composites/Companys";
 import Header from "./composites/Header";
 
