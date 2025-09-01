@@ -37,7 +37,7 @@ const Tags = ({
         <input
           type="text"
           placeholder={placeholder}
-          className="px-[18px] text-[#00000083] font-bold py-[17px] rounded-[8px] outline outline-[#E3E8EF] w-full"
+          className="px-[18px] text-[#00000083] font-[700] py-[17px] rounded-[8px] outline outline-[#E3E8EF] w-full"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
