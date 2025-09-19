@@ -32,7 +32,7 @@ const Companys = () => {
           <div>
             <Link href="createForm">
               <Button
-                text="დაიწყე ახალი კემპინგი"
+                text="შეასწორე პროფილი"
                 color=" bg-[#0866FF]"
                 size="w-[229px] py-3 px-2 border cursor-pointer"
                 img="/images/svg/plus.svg"
